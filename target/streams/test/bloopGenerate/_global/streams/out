@@ -1,0 +1,4 @@
+[debug] [scala_ex-test] Classpath dependencies List()
+[debug] [scala_ex-test] Dependencies from configurations List(scala_ex)
+[debug] Bloop wrote the configuration of project 'scala_ex-test' to '/Users/twang/scala_ex/.bloop/scala_ex-test.json'
+[success] Generated .bloop/scala_ex-test.json

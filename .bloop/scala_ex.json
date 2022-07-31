@@ -1,0 +1,161 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "scala_ex",
+        "directory": "/Users/twang/scala_ex",
+        "workspaceDir": "/Users/twang/scala_ex",
+        "sources": [
+            "/Users/twang/scala_ex/src/main/scala",
+            "/Users/twang/scala_ex/src/main/scala-2.12",
+            "/Users/twang/scala_ex/src/main/scala-2",
+            "/Users/twang/scala_ex/src/main/java",
+            "/Users/twang/scala_ex/target/scala-2.12/src_managed/main"
+        ],
+        "dependencies": [
+            
+        ],
+        "classpath": [
+            "/Users/twang/.sbt/boot/scala-2.12.16/lib/scala-library.jar"
+        ],
+        "out": "/Users/twang/scala_ex/.bloop/scala_ex",
+        "classesDir": "/Users/twang/scala_ex/.bloop/scala_ex/scala-2.12/classes",
+        "resources": [
+            "/Users/twang/scala_ex/src/main/resources",
+            "/Users/twang/scala_ex/target/scala-2.12/resource_managed/main"
+        ],
+        "scala": {
+            "organization": "org.scala-lang",
+            "name": "scala-compiler",
+            "version": "2.12.16",
+            "options": [
+                
+            ],
+            "jars": [
+                "/Users/twang/.sbt/boot/scala-2.12.16/lib/scala-library.jar",
+                "/Users/twang/.sbt/boot/scala-2.12.16/lib/scala-compiler.jar",
+                "/Users/twang/.sbt/boot/scala-2.12.16/lib/scala-reflect.jar",
+                "/Users/twang/.sbt/boot/scala-2.12.16/lib/scala-xml_2.12-1.0.6.jar"
+            ],
+            "setup": {
+                "order": "mixed",
+                "addLibraryToBootClasspath": true,
+                "addCompilerToClasspath": false,
+                "addExtraJarsToClasspath": false,
+                "manageBootClasspath": true,
+                "filterLibraryFromClasspath": true
+            }
+        },
+        "java": {
+            "options": [
+                
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "munit.Framework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home",
+                "options": [
+                    "-Duser.dir=/Users/twang/scala_ex"
+                ]
+            },
+            "mainClass": [
+                
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.12.16",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/Users/twang/.sbt/boot/scala-2.12.16/lib/scala-library.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/Users/twang/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.16/scala-library-2.12.16-sources.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "javadoc",
+                            "path": "/Users/twang/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.16/scala-library-2.12.16-javadoc.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.12.16",
+                    "configurations": "optional",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/Users/twang/.sbt/boot/scala-2.12.16/lib/scala-library.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/Users/twang/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.16/scala-library-2.12.16-sources.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "javadoc",
+                            "path": "/Users/twang/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.16/scala-library-2.12.16-javadoc.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "library"
+        ]
+    }
+}
