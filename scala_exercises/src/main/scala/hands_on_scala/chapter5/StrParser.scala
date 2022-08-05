@@ -1,3 +1,5 @@
+package hands_on_scala.chapter5;
+
 trait StrParser[T]{ def parse(s: String): T }
 
 object StrParser extends App {

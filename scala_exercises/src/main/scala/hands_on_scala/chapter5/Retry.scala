@@ -1,9 +1,11 @@
+package hands_on_scala.chapter5;
+
 object Retry extends App {
   def retry[T](max: Int, delay: Int)(f: => T): T = {
     var tries = 0;
     var result: Option[T] = None
     var currentDelay = delay
-    while (result == None) {
+    while (result.isEmpty) {
         try {
             result = Some(f)
         } 
