@@ -7,7 +7,7 @@ class ImmutableTrie(words: List[String]) extends App {
       val filteredInputs = wordsList.filter(w => w.length > index)
 
       for (
-        (child, childWords) <- wordsList.groupBy(w => w.charAt(index))
+        (child, childWords) <- filteredInputs.groupBy(w => w.charAt(index))
       ) yield (child, new Node(index + 1, childWords))
     }
   }
