@@ -1,3 +1,4 @@
+import scala.collection.mutable.Stack
 object ValidParentheses extends App {
     def isValid(s: String): Boolean = {
         def inner(str: List[Char], stck: List[Char]): Boolean = {
@@ -15,4 +16,22 @@ object ValidParentheses extends App {
     println(isValid("(({}))"))
     println(isValid("(({))"))
     println(isValid("{)"))
+
+    def isValidProcedural(s: String): Boolean = {
+        var stck = Stack[Char]()
+
+        for (c <- s) {
+            c match {
+                case '(' => stck.push(')')
+                case '{' => stck.push('}')
+                case _ => if (stck.isEmpty || c != stck.pop()) return false
+            }
+        }
+
+        stck.isEmpty
+    }
+
+    println(isValidProcedural("(({}))"))
+    println(isValidProcedural("(({))"))
+    println(isValidProcedural("{)"))
 }
