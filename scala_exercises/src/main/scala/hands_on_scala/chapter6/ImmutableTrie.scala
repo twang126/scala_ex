@@ -46,5 +46,4 @@ class ImmutableTrie(words: List[String]) extends App {
       output.result()
     }
   }
-
 }
