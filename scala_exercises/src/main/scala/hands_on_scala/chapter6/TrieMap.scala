@@ -1,5 +1,8 @@
 package hands_on_scala.chapter6
 
+import scala.collection.mutable
+import scala.reflect.ClassTag
+
 class TrieMap[T] {
   class Node(var value: Option[T], val children: scala.collection.mutable.Map[Char, Node] = collection.mutable.Map()) {}
   val root: Node = Node(None)
@@ -35,7 +38,7 @@ class TrieMap[T] {
     if (str.isEmpty) {
       curr.get.value = None
       if (curr.get.children.isEmpty) {
-        prev.get.children.remove(c)
+        prev.map(_.children.remove(c))
         true
       } else {
         false
@@ -44,11 +47,36 @@ class TrieMap[T] {
       val can_delete = _delete(str.substring(1), curr.get.children.get(str(0)), curr, str(0))
 
       if (can_delete && curr.get.children.isEmpty) {
-        prev.get.children.remove(c)
+        prev.map(_.children.remove(c))
         true
       } else {
         false
       }
+    }
+  }
+
+  def getValuesWithMatchingPrefixes(s: String)(implicit t: ClassTag[T]): Array[T] = {
+    var curr = Option(root)
+
+    for (c <- s if curr.nonEmpty) curr = curr.get.children.get(c)
+
+    if (curr.isEmpty) {
+      Array()
+    } else {
+      val results: mutable.ArrayBuilder[T] = Array.newBuilder[T]
+
+      def recurse(curr: Node): Unit = {
+        if (curr.value.nonEmpty) {
+          results.addOne(curr.value.get)
+        }
+
+        for ((c, n) <- curr.children) {
+          recurse(n)
+        }
+      }
+
+      recurse(curr.get)
+      results.result()
     }
   }
 }
